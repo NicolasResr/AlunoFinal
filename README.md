@@ -1,19 +1,58 @@
-# API de Cadastro de Alunos
+# API de Cadastro de Alunos - Java 21 + Spring Boot
 
-Este é um projeto de uma API RESTful simples desenvolvida em Java, utilizando o Spring Boot, para o cadastro de alunos. A API permite que você crie, leia, atualize e exclua (CRUD) informações de alunos em um banco de dados.
+Este projeto é uma API RESTful para o cadastro de alunos, desenvolvida em **Java 21** utilizando **Spring Boot** para a parte backend. A aplicação utiliza o **Aiven (MySQL)** como banco de dados, e inclui um frontend simples utilizando **HTML**, **CSS** e **JavaScript** para a interação do usuário.
 
 ## Tecnologias Utilizadas
 
-- **Java 17**
-- **Spring Boot** (para construção da API REST)
-- **Spring Data JPA** (para interação com o banco de dados)
-- **H2 Database** (banco de dados em memória para desenvolvimento)
-- **Maven** (para gerenciamento de dependências)
+- **Java 21** (JDK 21)
+- **Spring Boot** (Framework para construção de APIs REST)
+- **Aiven (MySQL)** (Banco de dados na nuvem)
+- **HTML** (Estrutura do frontend)
+- **CSS** (Estilos do frontend)
+- **JavaScript** (Interatividade no frontend e conectar o front com o backend)
+- **Maven** (Gerenciador de dependências e construção do projeto)
 
-## Funcionalidades
+## Funcionalidades da API
 
-- **Cadastrar aluno**: Adicionar novos alunos ao sistema.
+A API permite realizar as operações CRUD (Criar, Ler, Atualizar, Excluir) sobre o cadastro de alunos.
+
+- **Cadastrar aluno**: Adicionar novos alunos ao banco de dados.
 - **Listar alunos**: Obter uma lista de todos os alunos cadastrados.
-- **Buscar aluno**: Obter as informações de um aluno específico.
-- **Atualizar aluno**: Alterar as informações de um aluno já cadastrado.
-- **Excluir aluno**: Remover um aluno do sistema.
+- **Buscar aluno**: Consultar informações de um aluno específico.
+- **Atualizar aluno**: Modificar as informações de um aluno existente.
+- **Excluir aluno**: Remover um aluno do banco de dados.
+
+## Endpoints da API
+
+### 1. **Cadastrar aluno**
+- **Método**: `POST`
+- **URL**: `/a/p`
+- **Body (JSON)**:
+  ```json
+  {
+        "user": "vitor",
+        "telefone": "119232032",
+        "email": "vitor@gmail.com",
+        "imagemUrl": "https://i.pinimg.com/236x/eb/d8/4d/ebd84de163395907482a2e0eba978ea3.jpg"
+  }
+### 2. **Atualizar aluno**
+- **Método**: `PUT`
+- **URL**: `/a/{id}`
+- **Body (JSON)**:
+  ```json
+  {
+        "user": "jorge",
+        "telefone": "119232032",
+        "email": "madeira@gmail.com",
+        "imagemUrl": "https://i.pinimg.com/236x/eb/d8/4d/ebd84de163395907482a2e0eba978ea3.jpg"
+  }
+
+### 3. **Deletar aluno**
+- **Método**: `DELETE`
+- **URL**: `/a/{id}`
+
+### 4. **Buscar aluno**
+- **Método**: `GET`
+- **URL**: `/a
+
+ 
