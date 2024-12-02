@@ -53,6 +53,6 @@ A API permite realizar as operações CRUD (Criar, Ler, Atualizar, Excluir) sobr
 
 ### 4. **Buscar aluno**
 - **Método**: `GET`
-- **URL**: `/a
+- **URL**: `/a`
 
  
